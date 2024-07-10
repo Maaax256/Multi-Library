@@ -1,0 +1,34 @@
+﻿
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: #FF8C00;
+    border-radius: 5px;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+input {
+    width: 600px;
+    height: 50px;
+    margin: 0 5px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+    a:hover {
+        color: #696969;
+    }

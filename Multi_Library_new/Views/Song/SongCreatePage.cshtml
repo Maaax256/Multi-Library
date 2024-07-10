@@ -1,0 +1,90 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+@model Tuple<List<AlbumCover>, List<UserTable>>
+@{
+    ViewData["Title"] = "Add Song";
+    Layout = "_Layout"; 
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Add Song</title>
+    <link href="/css/SongCreate.css" rel="stylesheet" type="text/css" /> 
+    <link href="/css/CreateAlbum.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Створіть пісню</h2>
+        @using (Html.BeginForm("CreateSong", "Song", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <div class="form-group">
+                <label asp-for="Name">Назва</label>
+                <input asp-for="Name" name="Name" class="form-control" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Lyrics">Текст</label>
+                <textarea asp-for="Lyrics" name="Lyrics" class="form-control"></textarea>
+                <span asp-validation-for="Lyrics" class="text-danger"></span>
+            </div>
+
+                    /*<!--<div class="form-group">
+                            <label>Оберіть альбом</label>
+                            <select asp-for="AlbumId" name="AlbumId" class="form-control">
+                            <option value="">-- Select Album --</option>
+                                @foreach (var albumCover in Model.Item1)
+                                {
+                            <option value="@albumCover.album.Id">@albumCover.album.Name</option>
+                        }
+                        </select>
+                        <span asp-validation-for="AlbumId" class="text-danger"></span>
+                </div>-->*/
+            @foreach (var author in Model.Item2)
+            {
+                <div class="form-group">
+                    <label>Выберите соавторов</label>
+                    <div>
+                        <input asp-for="SelectedAuthors" type="checkbox" name="SelectedAuthors" value="author.Id" />
+                        <label asp-for="SelectedAuthors">@author.Name</label>
+                    </div>
+                </div>
+            }
+
+            <div class="form-group">
+                <label asp-for="SongFile">Завантажте файл пісні</label>
+                <input asp-for="SongFile" type="file" accept=".mp3" name="SongFile" class="form-control-file" required />
+                <span asp-validation-for="SongFile" class="text-danger"></span>
+            </div>
+
+            //@using (Html.BeginForm("CreateSong", "Song", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            //{
+                <div class="form-group">
+                    <label asp-for="SongCoverfile">Завантажте обложку пісні</label>
+                    <input type="file" name="SongCoverfile" class="form-control-file" />
+                    <!--<span asp-validation-for="SongCoverfile" class="text-danger"></span>-->
+                </div>
+            //}
+
+                <button type="submit" onclick="validateForm()" class="btn btn-primary">Add Song</button>
+        }
+    </div>
+    <script>
+        function validateForm() {
+            var name = document.getElementById('Name').value;
+            var lyrics = document.getElementById('Lyrics').value;
+            var songFile = document.getElementById('SongFile').value;
+
+            if (!name.trim() || !lyrics.trim() || !songFile.trim()) {
+                alert('Please fill in all fields except Album ID');
+                return false;
+            }
+
+            document.getElementById('addSongForm').submit();
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,155 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+@model Tuple<UserTable, List<Song>,List<CoverAlbum> >
+
+
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/AuthorPage.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        .wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .author-head {
+            text-align: left;
+            margin-bottom: 20px;
+            width: 500px;
+        }
+
+            .author-head p {
+                margin: 5px 0;
+                font-size: 18px;
+                font-weight: bold;
+            }
+
+        .album-box {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-top: 25px;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-in-out;
+            max-width: 400px;
+        }
+
+            .album-box:hover {
+                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+                transform: translateY(-5px);
+            }
+
+            .album-box img {
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                margin-bottom: 10px;
+                align-self:center;
+            }
+
+            .album-box p {
+                margin: 5px 0;
+            }
+
+        .song-list {
+            list-style-type: none;
+            padding: 0;
+            margin-top: 10px;
+            text-align: left;
+        }
+
+            .song-list li {
+                margin-bottom: 5px;
+                font-size: 14px;
+            }
+
+        a.button {
+            display: inline-block;
+            padding: 10px 20px;
+            margin-top: 10px;
+            text-decoration: none;
+            color: #fff;
+            background-color: #FF8C00;
+            border-radius: 5px;
+            transition: background-color 0.3s ease-in-out;
+            align-self: center;
+        }
+
+            a.button:hover {
+                background-color: #FFA500; 
+            }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+    <div class="author-head">
+        <p>Имя: @Model.Item1.Name</p>
+        <p>Про автора: @Model.Item1.Description</p>
+        <p>Дата регистрации: @Model.Item1.DateCreate</p>
+    </div>
+    <div class="author-body">
+        <h2>Альбомы</h2>
+        @{
+            foreach(var obj in Model.Item3)
+            {
+                if(obj.Cover != null)
+                {
+                    <div class="album-box">
+                        <img src="@obj.Cover.Link">
+                        <p>@obj.Album.Name</p>
+                        <p>Количество песен: @obj.Album.Songs.Count</p>
+                        <div class="expand-button">+</div>
+                        <ul class="song-list">
+                            @foreach (var song in obj.Album.Songs)
+                            {
+                                <li>@song.Name</li>
+                            }
+                        </ul>
+                            <a class="button" href="@Url.Action("InfoAlbum", "Album", new { albumId = obj.Album.Id, covertId = obj.Cover.Id })">Детальніше</a>
+
+                    </div>
+                }
+                else
+                {
+                    <div class="album-box">
+                        <img src="@obj.Cover.Link">
+                        <p>@obj.Album.Name</p>
+                        <p>Количество песен: @obj.Album.Songs.Count</p>
+                        <p>@obj.Cover.DateCreate</p>
+                        <div class="expand-button">+</div>
+                        <ul class="song-list">
+                                @foreach (var song in obj.Album.Songs)
+                                {
+                                    <li>@song.Name</li>
+                                }
+                        </ul>
+                            <a class="button" href="@Url.Action("InfoAlbum", "Album", new { albumId = obj.Album.Id, covertId = obj.Cover.Id })">Детальніше</a>
+                    </div>
+                }
+            }
+        }
+    </div>
+    </div>
+</body>
+</html>
+

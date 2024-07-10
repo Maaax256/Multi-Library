@@ -1,0 +1,63 @@
+﻿.wrapper{
+    min-height: 100vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.clip-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+
+.clip-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 364px;
+    background-color: #f9f9f9;
+    margin-right: 50px;
+}
+.clip-cart:first-child {
+margin-left: 50px;
+}
+    .clip-cart p {
+        margin: 5px 15px;
+        align-self: flex-start;
+        margin-left: 5px;
+    }
+
+.detail {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 180px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FF8C00;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #fff;
+    text-align: center;
+    top: 50px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+    .detail:hover {
+        background-color: #D27C00;
+        border-color: #2980b9;
+    }

@@ -1,0 +1,139 @@
+﻿
+
+.dropdown {
+    position: relative;
+    background-color: #001A25;
+    width: auto;
+}
+
+    .dropdown button {
+        background-color: #FF8C00;
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+.dropdown-content {
+    width: 150px;
+    display: none;
+    position: absolute;
+    color: inherit;
+    top: 100%;
+    left: -38px;
+    background-color: #FF8C00; 
+    z-index: 1;
+    font-size: 18px;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 20px;
+}
+
+    .dropdown-content ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        align-items: center;
+    }
+
+        .dropdown-content ul li {
+            text-align: center;
+        }
+
+
+    .dropdown-content a {
+        color: inherit;
+        text-decoration: none;
+    }
+
+.show {
+    display: block;
+}
+
+.show {
+    display: block;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    width: 100%;
+    height: 70px;
+    background-color: #FF8C00;
+    padding: 0 10px;
+    margin-bottom: 15px;
+}
+
+.nav-bar {
+   display: flex;
+   flex-direction: row;
+}
+
+
+.nav-a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+
+
+a:hover {
+    color: #696969;
+}
+
+
+.search-area {
+    position: relative;
+    display: inline-block;
+}
+
+    .search-area input {
+        width: 550px;
+        height: 50px;
+        margin: 0 5px;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        padding-right: 30px; 
+    }
+
+    .search-area button {
+        position: absolute;
+        top: 50%;
+        right: 5px; 
+        height: 50px;
+        border: none;
+        transform: translateY(-50%);
+    }
+
+.authefiaction-bar{
+    display:flex;
+    flex-direction: row;
+
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 100px;
+    background-color: #FF8C00;
+    padding: 10px;
+    margin-top: 15px;
+    position: relative;
+}
+
+
+footer p{
+    margin: 0;
+    margin-bottom: 5px;
+}

@@ -1,0 +1,62 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+<!--using Multi_Library.Covers;;-->
+@model IEnumerable<Song>
+
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/SongsPage.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+    <div class="wrapper">
+
+
+        <h2 style="align-self: center">Самые популярные песни</h2>
+        <div class="song-box">
+        @{
+            foreach (var song in Model)
+            {
+                <div class="song-cart">
+                    @{
+                        if (song.CoverId.HasValue)
+                        {
+                            //int coverid = song.CoverId.Value;
+                            //var cover = Model(coverid);
+                            <img src="@song.Cover.Link" />
+                        }
+                        else
+                        {
+                            <img src="/Covers/Нет_Альбома.jpg" />
+                        }
+                        <p>Название: <strong>@song.Name</strong></p>
+                        <p>Дата выпуска: <strong>@song.DateCreate</strong></p>
+                        @if (song.AlbumId.HasValue)
+                        {
+                            //int albumid = song.AlbumId.Value;
+                            //var album = Model.Item2.GetById(albumid);
+                            <p>Название альбома: <strong>@song.Album.Name</strong></p>
+                        }
+                        else
+                        {
+                            <p>Название альбома: <strong>Без альбома</strong></p>
+                        }
+                            <p></p>
+                        <a class="details-btn" href="@Url.Action("SongInformation", "Song", new { id = song.Id })">Подробнее</a>
+                        <a class="details-btn" href="@Url.Action("AddFavoriteSong", "Account", new { songid = song.Id })">+</a>
+                    }
+                </div>
+            }
+        }
+    </div>
+    </div>
+    </body>
+</html>

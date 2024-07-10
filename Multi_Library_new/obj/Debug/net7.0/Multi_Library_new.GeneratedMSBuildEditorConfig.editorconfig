@@ -1,0 +1,125 @@
+is_global = true
+build_property.TargetFramework = net7.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = Multi_Library_new
+build_property.RootNamespace = Multi_Library_new
+build_property.ProjectDir = E:\Учёба уник\Курсовая ИС 3.2 курс\Multi_Library_new\Multi-Library\Multi_Library_new\
+build_property.RazorLangVersion = 7.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = E:\Учёба уник\Курсовая ИС 3.2 курс\Multi_Library_new\Multi-Library\Multi_Library_new
+build_property._RazorSourceGeneratorDebug = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Account/DeleteUsers.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxEZWxldGVVc2Vycy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Account/FavoriteSongsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxGYXZvcml0ZVNvbmdzUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Account/LoginView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxMb2dpblZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Account/MostPopularSongs.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxNb3N0UG9wdWxhclNvbmdzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Account/ProfileView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxQcm9maWxlVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Account/RegisterViewcshtml.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWNjb3VudFxSZWdpc3RlclZpZXdjc2h0bWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Album/AlbumPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cQWxidW1QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Album/AlbumsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cQWxidW1zUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Album/CreateAlbumPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cQ3JlYXRlQWxidW1QYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Album/EditAlbumPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQWxidW1cRWRpdEFsYnVtUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Compilation/CompilationCreatePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29tcGlsYXRpb25cQ29tcGlsYXRpb25DcmVhdGVQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Cover/CoversPageView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ292ZXJcQ292ZXJzUGFnZVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Home/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Home/Index0.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleDAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Search/SearchByNameResult.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2VhcmNoXFNlYXJjaEJ5TmFtZVJlc3VsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Song/EditSongPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xFZGl0U29uZ1BhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Song/SongCreatePage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xTb25nQ3JlYXRlUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Song/SongEditPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xTb25nRWRpdFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Song/SongPageView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xTb25nUGFnZVZpZXcuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/Song/SongView.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU29uZ1xTb25nVmlldy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/User/AuthorPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBdXRob3JQYWdlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/User/AuthorsPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVXNlclxBdXRob3JzUGFnZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/VideoClip/CreateVideoClip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9DbGlwXENyZWF0ZVZpZGVvQ2xpcC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/VideoClip/EditVideoClip.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9DbGlwXEVkaXRWaWRlb0NsaXAuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/VideoClip/VideClips.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9DbGlwXFZpZGVDbGlwcy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[E:/Учёба уник/Курсовая ИС 3.2 курс/Multi_Library_new/Multi-Library/Multi_Library_new/Views/VideoClip/VideoClipPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVmlkZW9DbGlwXFZpZGVvQ2xpcFBhZ2UuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 

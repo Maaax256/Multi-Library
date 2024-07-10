@@ -1,0 +1,68 @@
+﻿@using Multi_Library.Models
+@using Multi_Library.Interfaces
+@model Tuple<IEnumerable<UserTable>, IEnumerable<Song>>
+
+@{
+    ViewData["Title"] = "Create Album";
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create Album</title>
+    <link href="/css/CreateAlbum.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="create-album-container" style="height: 100vh;">
+        @using (Html.BeginForm("CreateAlbum", "Album", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <h2>Создайте альбом</h2>
+
+            <div class="form-group">
+                <label asp-for="Name">Название</label>
+                <input asp-for="Name" name="Name" class="form-control" required />
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="Description">Описание</label>
+                <textarea asp-for="Description" name="Description" class="form-control"></textarea>
+                <span asp-validation-for="Description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>Выберите песни</label>
+                <div class="song-grid">
+                @foreach (var song in Model.Item2)
+                {
+                    <div>
+                        <input asp-for="SelectedSongs" type="checkbox" name="SelectedSongs" value="@song.Id" />
+                        <label asp-for="SelectedSongs">@song.Name</label>
+                    </div>
+                }
+                </div>
+            </div>
+
+            /*<div class="form-group">
+                <label>Выберите обложку</label>
+                <input type="file" name="AlbumCover" class="form-control-file" />
+            </div>*/
+
+            <button type="submit" class="btn btn-primary">Создать альбом</button>
+        }
+    </div>
+    <script>
+        function validateForm() {
+            var checkboxes = document.querySelectorAll('input[name="SelectedSongs"]:checked');
+            if (checkboxes.length == 0) {
+                alert('Выберите хотя бы одну песню!');
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

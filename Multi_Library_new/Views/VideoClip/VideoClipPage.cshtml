@@ -1,0 +1,34 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+@model Tuple<VideoClip>
+
+
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/VideoClipPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <video controls width="550" src="@Model.Item1.Link">
+        </video>
+        <div class="clip-info">
+            <a href="@Url.Action("SongViewPage", "Song", new { id = Model.Item1.SongId })"><h3>@Model.Item1.Song.Name</h3></a>
+            <p>Дата загрузки: @Model.Item1.DateCreate</p>
+            @{
+            if (Model.Item1.Song.Lyrics != null)
+            {
+            <h3>Текст</h3>
+            <p>@Html.Raw(Model.Item1.Song.Lyrics?.Replace("\\n", "<br>"))</p>
+            }}
+        </div>
+    </div>
+</body>
+</html>
+

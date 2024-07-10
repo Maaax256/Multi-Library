@@ -1,0 +1,92 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+<!--using Multi_Library.Covers;;-->
+@model Tuple<IEnumerable<Song>, IAlbum, ICover, List<AlbumCover>>
+
+@{
+    Layout = "_Layout";
+}
+
+
+
+<!DOCTYPE html>
+
+<html>
+    <head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/IndexStyle.css" rel="stylesheet" type="text/css" />
+    <!--<link href="/css/SongsPage.css" rel="stylesheet" type="text/css" />-->
+
+    </head>
+
+    <body>
+
+
+    <!--<div class="wrapper">-->
+        <h2>Новинки в категории песен</h2>
+        <div class="song-box">
+            @{
+                foreach (var song in Model.Item1)
+                {
+                    <div class="song-cart">
+                        @{
+                            if (song.CoverId.HasValue)
+                            {
+                                int coverid = song.CoverId.Value;
+                                var cover = Model.Item3.GetById(coverid);
+                                <img src="@cover.Link"/>
+                            }
+                            else
+                            {
+                                <!--<img src="/Covers/Нет_Альбома.jpg"/>-->
+                            }
+                            <p>Название: <strong>@song.Name</strong></p>
+                            <p>Дата выпуска: <strong>@song.DateCreate.</strong></p>
+                            if (song.AlbumId.HasValue)
+                            {
+                                int albumid = song.AlbumId.Value;
+                                var album = Model.Item2.GetById(albumid);
+                                <p>Название альбома: <strong>@album.Name</strong></p>
+                            }
+                            else
+                            {
+                                <p>Название альбома: <strong>Без альбома</strong></p>
+                            }
+                        }
+                        <a class="details-btn" href="@Url.Action("SongInformation", "Song", new { id = song.Id })">Подробнее</a>
+                        <a class="details-btn" href="@Url.Action("AddFavoriteSong", "Account", new { songid = song.Id })">+</a>
+                    </div>
+                }
+            }
+        </div>
+    <!--</div>-->
+    <h2>Новинки в категории альбомы</h2>
+    <div class="album-box">
+        @{
+            foreach (var albumCover in Model.Item4)
+            {
+                <div class="album-cart">
+                    <img src="@albumCover.cover.Link" />
+                    <p>Название альбома: @albumCover.album.Name</p>
+                    @{
+                        string description = albumCover.album.Description;
+                        if (!String.IsNullOrEmpty(description))
+                        {
+                            if (description.Length > 30)
+                            {
+                                description = $"{description.Substring(0, 50)}...";
+                            }
+                        }
+                    }
+                    <p class="album-description">Описание: @description</p>
+                    <p>Дата выхода: albumCover.cover.DatePut.ToShortDateString()</p>
+                    <a class="details-btn" href="@Url.Action("InfoAlbum", "Album", new { albumId = albumCover.album.Id, covertId = albumCover.cover.Id})">Подробнее</a>
+                </div>
+            }
+        }
+    </div>
+</body>
+</html>
+

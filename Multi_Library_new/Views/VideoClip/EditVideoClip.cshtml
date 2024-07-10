@@ -1,0 +1,59 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+@model Tuple<VideoClip, List<Song>>
+
+
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/VideoClipPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <video controls width="550" src="@Model.Item1.Link">
+        </video>
+        <div class="clip-info">
+            <a href="@Url.Action("SongPageView", "Song", new { id = Model.Item1.SongId })"><h3>@Model.Item1.Song.Name</h3></a>
+            <p>Дата загрузки: Model.Item1.DatePut.ToShortDateString()</p>
+            <h3>Текст</h3>
+            <p>@Html.Raw(Model.Item1.Song.Lyrics.Replace("\\n", "<br>"))</p>
+        </div>
+ 
+            <div class="edit-form">
+            @using (Html.BeginForm("UpdateVideoClip", "VideoClip", FormMethod.Post, new { enctype = "multipart/form-data" }))
+            {
+                @Html.AntiForgeryToken()
+                <input type="hidden" name="videoClipId" value="@Model.Item1.Id" />
+                <select asp-for="SongId" name="SongId" class="form-control" required>
+                    <option value="@Model.Item1.SongId">@Model.Item1.Song.Name</option>
+                    @foreach (var song in Model.Item2)
+                    {
+                        <option value="@song.Id">@song.Name</option>
+                    }
+                </select>
+                <div class="form-group">
+                    <label asp-for="Item2">Загрузите видео (формат MP4)</label>
+                    <input asp-for="Item2" type="file" name="VideoClip" accept=".mp4" class="form-control" />
+                </div>
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                </div>
+                }
+            @using (Html.BeginForm("DeleteVideoClip", "VideoClip", FormMethod.Post))
+            {
+                <input type="hidden" name="videoClipId" value="@Model.Item1.Id" />
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Удалить</button>
+                </div>
+            }
+        </div>
+    </div>
+</body>
+</html>
+

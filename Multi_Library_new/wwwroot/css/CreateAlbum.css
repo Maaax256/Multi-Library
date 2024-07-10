@@ -1,0 +1,60 @@
+﻿.create-album-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+    .create-album-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .create-album-container .form-group {
+        margin-bottom: 20px;
+    }
+
+    .create-album-container label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .create-album-container input[type="text"],
+    .create-album-container input[type="file"],
+    .create-album-container select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .create-album-container input[type="submit"],
+    .create-album-container button {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .create-album-container input[type="submit"]:hover,
+        .create-album-container button:hover {
+            background-color: #45a049;
+        }
+
+    .create-album-container .text-danger {
+        color: red;
+    }
+
+.song-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    // Adjust column size as needed gap: 10px;
+    // Adjust spacing as needed
+}

@@ -1,0 +1,53 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+@model Tuple<List<UserTable>, Album, string>
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/AlbumPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="album-head">
+            <img src="@Model.Item3" />
+            <div>
+                <p>Название: @Model.Item2.Name</p>
+                <p>Автора: </p>
+                @{
+                    @foreach (var authorName in Model.Item1)
+                    {
+                        <a href="@Url.Action("AuthorInfo", "User", new { authorId = authorName.Id })">@authorName.Name</a>
+                    }
+                }
+            </div>
+        </div>
+        <div class="album-body">
+            <h4 style="align-self: center; margin-top: 40px;">Песни входящие в альбом</h4>
+            @{
+                foreach (var song in Model.Item2.Songs)
+                {
+                    <div class="song-box">
+                        <a href="@Url.Action("SongInformation", "Song", new { id = song.Id })">
+                            <img class="song-img" src="@Model.Item3" />
+                        </a>
+                        <div>
+                            <p>@song.Name</p>
+                            <p>song.DatePut.ToShortDateString()</p>
+                        </div>
+                        <audio controls class="audio-player">
+                            <source src="@song.Link" type="audio/mp3">
+                        </audio>
+                    </div>
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>

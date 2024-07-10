@@ -1,0 +1,33 @@
+﻿.wrapperB {
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+.edit-album-form {
+    display: flex; 
+    flex-direction: column;
+    margin-top: 20px;
+    margin-left: 320px;
+    margin-right: 320px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    align-items: center;
+}
+
+
+
+.audio-player {
+    background-color: transparent;
+    color: black;
+}
+
+    .audio-player::-webkit-media-controls {
+        background-color: transparent;
+    }
+
+    .audio-player::-webkit-media-controls-enclosure {
+        background-color: transparent;
+    }
+

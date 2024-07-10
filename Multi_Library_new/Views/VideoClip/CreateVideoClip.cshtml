@@ -1,0 +1,42 @@
+﻿@using Multi_Library.Models
+@using Multi_Library.Interfaces
+
+@model Tuple<List<Song>>
+
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Create Video Clip</title>
+    <link href="/css/CrateVidioClip.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="create-video-clip-container">
+        @using (Html.BeginForm("CreateVideoClip", "VideoClip", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            <h2>Добавить видеоклип</h2>
+            <div class="form-group">
+                <label asp-for="Item1">Выберите песню</label>
+                <select asp-for="Item1" class="form-control" name="songId" required>
+                    <option value="">-- Выберите песню --</option>
+                    @foreach (var song in Model.Item1)
+                    {
+                        <option value="@song.Id">@song.Name</option>
+                    }
+                </select>
+            </div>
+            <div class="form-group">
+                <label asp-for="Item2">Загрузите видео (формат MP4)</label>
+                <input asp-for="Item2" type="file" name="VideoClip" accept=".mp4" class="form-control" required />
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-primary">Добавить видеоклип</button>
+            </div>
+        }
+    </div>
+</body>
+</html>

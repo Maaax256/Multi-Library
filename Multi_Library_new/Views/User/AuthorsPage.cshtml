@@ -1,0 +1,55 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+<!--using Multi_Library.Covers;;-->
+@model Tuple<IEnumerable<AuthorSong>, IEnumerable<UserTable>>
+
+
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/AuthorsPage.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 style="align-self: center">Все автора</h2>
+        @{
+            //foreach (var obj in Model.Item1)
+            //{
+            //    count++;
+            //    var CountSong = Model.Item1.Where(x => x.AuthorId == obj.AuthorId).Count();
+            //    //var list = Model.Item1.Where(x => x.AuthorId == obj.AuthorId);
+            //    //if ()
+            //    //{
+            //    <a class="author-desc" href="@Url.Action("AuthorInfo", "User", new { authorId = obj.AuthorId})">
+            //    <div class="author-cart">
+            //        <p>Имя: @obj.Author.Name</p>
+            //        <p>Количество песен: @CountSong</p>
+            //        <p>Дата регистрации: @obj.Author.DateRegist.ToShortDateString()</p>
+            //    </div>
+            //    </a>
+            //    //} 
+            //}
+
+            foreach (var obj in Model.Item2)
+            {
+                var CountSong = Model.Item1.Where(x => x.AuthorId == obj.Id).Count();
+                <a class="author-desc" href="@Url.Action("AuthorInfo", "User", new { authorId = obj.Id})">
+                    <div class="author-cart">
+                        <p>Имя: @obj.Name</p>
+                        <p>Количество песен: @CountSong</p>
+                        <p>Дата регистрации: @obj.DateCreate</p>   <!--.ToShortDateString()-->
+                    </div>
+                </a>
+            }
+        }
+    </div>
+</body>
+</html>
+

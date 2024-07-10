@@ -1,0 +1,38 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+@model Tuple<IEnumerable<VideoClip>>
+
+
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/VideoClipsPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h2 style="align-self: center">Все клипы</h2>
+        <div class="clip-box">
+            @{
+                foreach (var obj in Model.Item1)
+                {
+                    <div class="clip-cart">
+                        <video width="250" src="@obj.Link" start="10">
+                        </video>
+                        <a><h3>@obj.Song.Name</h3></a>
+                        <p>Дата загрузки: obj.DatePut.ToShortDateString()</p>
+                        <a href="@Url.Action("InfoClip", "VideoClip", new { clipId = obj.Id })" class="detail">Подробнее</a>
+                    </div>
+                }
+            }
+
+        </div>
+    </div>
+</body>
+</html>
+

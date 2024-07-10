@@ -1,0 +1,65 @@
+﻿@using Multi_Library.Models;
+
+@{
+    ViewData["Title"] = "FavoriteSongs";
+    Layout = "_Layout";
+}
+@model IEnumerable<Song>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/Profile.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+
+        @if (Model.Count() == 0)
+        {
+            <h3>На данный момент у вас не добавлено песен</h3>
+        }
+        <div class="song-body" style="min-height: 200px;">
+            @foreach (var song in Model)
+            {
+                <div class="song-cart">
+                    @{
+                        <img src="@song.Cover?.Link" />
+                        <p>Название: <strong>@song.Name</strong></p>
+                        <p>Дата выпуска: <strong>@song.DateCreate</strong></p>
+                        @if (song.AlbumId.HasValue)
+                        {
+                            //int albumid = song.AlbumId.Value;
+                            //var album = Model.Item3.FirstOrDefault(x => x.album.Id == albumid);
+                            <p>Название альбома: <strong>@song.Album.Name</strong></p>
+                        }
+                        else
+                        {
+                            <p>Название альбома: <strong>Без альбома</strong></p>
+                        }
+                        //<a class="detail" href="@Url.Action("SongEditPage", "Song", new { id = song.Id })">Редагувати</a>
+                    }
+                </div>
+            }
+        </div>
+    </div>
+    <script>
+        function updateHiddenField() {
+            var checkbox = document.getElementById("myCheckbox");
+            var hiddenField = document.getElementById("author");
+
+            hiddenField.value = checkbox.checked ? "true" : "false";
+        }
+
+        function validateForm() {
+            var passwordField = document.getElementById("Password");
+            if (passwordField.value.trim() === "") {
+                alert("Введите пароль!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

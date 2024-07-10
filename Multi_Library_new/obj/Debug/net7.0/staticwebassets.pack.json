@@ -1,0 +1,397 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\1.jpg",
+      "PackagePath": "staticwebassets\\Covers\\1.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\2.jpg",
+      "PackagePath": "staticwebassets\\Covers\\2.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\3.jpg",
+      "PackagePath": "staticwebassets\\Covers\\3.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\40-Cute-Tiny-Animal-Pictures-10.jpg",
+      "PackagePath": "staticwebassets\\Covers\\40-Cute-Tiny-Animal-Pictures-10.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Amelia-Earhart-cockpit-airplane-Lockheed-Electra.jpg",
+      "PackagePath": "staticwebassets\\Covers\\Amelia-Earhart-cockpit-airplane-Lockheed-Electra.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Asahiflex-single-lens-reflex-camera(1).jpg",
+      "PackagePath": "staticwebassets\\Covers\\Asahiflex-single-lens-reflex-camera(1).jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Asahiflex-single-lens-reflex-camera.jpg",
+      "PackagePath": "staticwebassets\\Covers\\Asahiflex-single-lens-reflex-camera.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Leica-photo-camera-KPI-Museum-Kiev-Ukraine-July-24-2015.jpg",
+      "PackagePath": "staticwebassets\\Covers\\Leica-photo-camera-KPI-Museum-Kiev-Ukraine-July-24-2015.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Michael-Faraday-John-Frederic-Daniell.jpg",
+      "PackagePath": "staticwebassets\\Covers\\Michael-Faraday-John-Frederic-Daniell.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Napoleon-Crossing-Alps-Jacques-Louis-David-1800.jpg",
+      "PackagePath": "staticwebassets\\Covers\\Napoleon-Crossing-Alps-Jacques-Louis-David-1800.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Neon-sign-BAR-alcohol-consumption.jpg",
+      "PackagePath": "staticwebassets\\Covers\\Neon-sign-BAR-alcohol-consumption.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Nevermind.jpg",
+      "PackagePath": "staticwebassets\\Covers\\Nevermind.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\area-51-gate.jpg",
+      "PackagePath": "staticwebassets\\Covers\\area-51-gate.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\b3163e933394dff26893a576f7e6b44d.jpg",
+      "PackagePath": "staticwebassets\\Covers\\b3163e933394dff26893a576f7e6b44d.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\basketball-Orange-background-lighting-Homepage-entertainment-history-2010.jpg",
+      "PackagePath": "staticwebassets\\Covers\\basketball-Orange-background-lighting-Homepage-entertainment-history-2010.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\burns-Clouds-smoke-place-Gulf-of-Mexico-May-19-2010.jpg",
+      "PackagePath": "staticwebassets\\Covers\\burns-Clouds-smoke-place-Gulf-of-Mexico-May-19-2010.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\cassowary.jpg",
+      "PackagePath": "staticwebassets\\Covers\\cassowary.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\photo_2021-11-30_01-54-16.jpg",
+      "PackagePath": "staticwebassets\\Covers\\photo_2021-11-30_01-54-16.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\photo_2021-12-15_15-44-20.jpg",
+      "PackagePath": "staticwebassets\\Covers\\photo_2021-12-15_15-44-20.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\photo_2022-11-19_11-49-27.jpg",
+      "PackagePath": "staticwebassets\\Covers\\photo_2022-11-19_11-49-27.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\photo_2022-11-19_11-49-30.jpg",
+      "PackagePath": "staticwebassets\\Covers\\photo_2022-11-19_11-49-30.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\veins-arteries-human.jpg",
+      "PackagePath": "staticwebassets\\Covers\\veins-arteries-human.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Знімок екрана (3).png",
+      "PackagePath": "staticwebassets\\Covers\\Знімок екрана (3).png"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Нет_Альбома.jpg",
+      "PackagePath": "staticwebassets\\Covers\\Нет_Альбома.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Covers\\Снимок экрана 2023-04-26 182057.png",
+      "PackagePath": "staticwebassets\\Covers\\Снимок экрана 2023-04-26 182057.png"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Ahah, classic.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Ahah, classic.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\All Time Low-Six Feet Under The Stars (Acoustic).mp3",
+      "PackagePath": "staticwebassets\\Songs\\All Time Low-Six Feet Under The Stars (Acoustic).mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Ark Patrol-Let Go.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Ark Patrol-Let Go.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Bell and Sakura.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Bell and Sakura.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Bon_Iver-Holocene.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Bon_Iver-Holocene.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\City and Colour-Like Knives.mp3",
+      "PackagePath": "staticwebassets\\Songs\\City and Colour-Like Knives.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Mathbonus-Radio Damage.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Mathbonus-Radio Damage.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Modern orchestra.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Modern orchestra.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Rig 5.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Rig 5.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\SmellsLikeTeenSpirit.mp3",
+      "PackagePath": "staticwebassets\\Songs\\SmellsLikeTeenSpirit.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\WTF.mp3",
+      "PackagePath": "staticwebassets\\Songs\\WTF.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\guitar testing.mp3",
+      "PackagePath": "staticwebassets\\Songs\\guitar testing.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\organ shit.mp3",
+      "PackagePath": "staticwebassets\\Songs\\organ shit.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\viintage.mp3",
+      "PackagePath": "staticwebassets\\Songs\\viintage.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Аккорды.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Аккорды.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\АккордыАккорды_8558fefb-52c5-4232-93c2-60e3b487f378.mp3",
+      "PackagePath": "staticwebassets\\Songs\\АккордыАккорды_8558fefb-52c5-4232-93c2-60e3b487f378.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\АккордыАккорды_e33bf018-3ee6-43d8-b77d-27c124bf2eb6.mp3",
+      "PackagePath": "staticwebassets\\Songs\\АккордыАккорды_e33bf018-3ee6-43d8-b77d-27c124bf2eb6.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Проэкт 2.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Проэкт 2.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Рок адаптация.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Рок адаптация.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Роковая судьба.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Роковая судьба.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Фонкешник.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Фонкешник.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\Чи_то_пост_чи_то_панк.mp3",
+      "PackagePath": "staticwebassets\\Songs\\Чи_то_пост_чи_то_панк.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\биток с мивиной.mp3",
+      "PackagePath": "staticwebassets\\Songs\\биток с мивиной.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\биток с мивинойбиток с мивиной_95153a9d-9acd-45c2-bc3d-5913156fc62e.mp3",
+      "PackagePath": "staticwebassets\\Songs\\биток с мивинойбиток с мивиной_95153a9d-9acd-45c2-bc3d-5913156fc62e.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\биточек.mp3",
+      "PackagePath": "staticwebassets\\Songs\\биточек.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\гранж.mp3",
+      "PackagePath": "staticwebassets\\Songs\\гранж.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\ееее рок.mp3",
+      "PackagePath": "staticwebassets\\Songs\\ееее рок.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\кит_и_кики.mp3",
+      "PackagePath": "staticwebassets\\Songs\\кит_и_кики.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\конечный клин.mp3",
+      "PackagePath": "staticwebassets\\Songs\\конечный клин.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\осень.mp3",
+      "PackagePath": "staticwebassets\\Songs\\осень.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\реверб-полёт.mp3",
+      "PackagePath": "staticwebassets\\Songs\\реверб-полёт.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\рэп какубумба.mp3",
+      "PackagePath": "staticwebassets\\Songs\\рэп какубумба.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Songs\\чиста басс.mp3",
+      "PackagePath": "staticwebassets\\Songs\\чиста басс.mp3"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Video_Clip\\Cö_shu_Nie_–_bullet_Official_Video\u3000__PSYCHO_PASS_サイコパス_3”_ED.mp4",
+      "PackagePath": "staticwebassets\\Video_Clip\\Cö_shu_Nie_–_bullet_Official_Video\u3000__PSYCHO_PASS_サイコパス_3”_ED.mp4"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Video_Clip\\SmellsLikeTeenSpirit.mp4",
+      "PackagePath": "staticwebassets\\Video_Clip\\SmellsLikeTeenSpirit.mp4"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Video_Clip\\Vundabar Greenland music video.mp4",
+      "PackagePath": "staticwebassets\\Video_Clip\\Vundabar Greenland music video.mp4"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Video_Clip\\Люблю польский.mp4",
+      "PackagePath": "staticwebassets\\Video_Clip\\Люблю польский.mp4"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Video_Clip\\＜映画「亜人」主題歌＞THE_ORAL_CIGARETTES「BLACK_MEMORY」Music_Video_4th_AL「Kisses.mp4",
+      "PackagePath": "staticwebassets\\Video_Clip\\＜映画「亜人」主題歌＞THE_ORAL_CIGARETTES「BLACK_MEMORY」Music_Video_4th_AL「Kisses.mp4"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\Vundabar Greenland music video.mp4",
+      "PackagePath": "staticwebassets\\Vundabar Greenland music video.mp4"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\AlbumPage.css",
+      "PackagePath": "staticwebassets\\css\\AlbumPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\AlbumsPage.css",
+      "PackagePath": "staticwebassets\\css\\AlbumsPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\AuthorPage.css",
+      "PackagePath": "staticwebassets\\css\\AuthorPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\AuthorsPage.css",
+      "PackagePath": "staticwebassets\\css\\AuthorsPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\Authotification.css",
+      "PackagePath": "staticwebassets\\css\\Authotification.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\CompilationEdit.css",
+      "PackagePath": "staticwebassets\\css\\CompilationEdit.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\CoversPage.css",
+      "PackagePath": "staticwebassets\\css\\CoversPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\CrateVidioClip.css",
+      "PackagePath": "staticwebassets\\css\\CrateVidioClip.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\CreateAlbum.css",
+      "PackagePath": "staticwebassets\\css\\CreateAlbum.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\EditAlbum.css",
+      "PackagePath": "staticwebassets\\css\\EditAlbum.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\Header.css",
+      "PackagePath": "staticwebassets\\css\\Header.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\IndexStyle.css",
+      "PackagePath": "staticwebassets\\css\\IndexStyle.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\Profile.css",
+      "PackagePath": "staticwebassets\\css\\Profile.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\SearchResult.css",
+      "PackagePath": "staticwebassets\\css\\SearchResult.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\SongCreate.css",
+      "PackagePath": "staticwebassets\\css\\SongCreate.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\SongEditPage.css",
+      "PackagePath": "staticwebassets\\css\\SongEditPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\SongPage.css",
+      "PackagePath": "staticwebassets\\css\\SongPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\SongsPage.css",
+      "PackagePath": "staticwebassets\\css\\SongsPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\StyleSheet.css",
+      "PackagePath": "staticwebassets\\css\\StyleSheet.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\VideoClipPage.css",
+      "PackagePath": "staticwebassets\\css\\VideoClipPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\VideoClipsPage.css",
+      "PackagePath": "staticwebassets\\css\\VideoClipsPage.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\css\\resize.css",
+      "PackagePath": "staticwebassets\\css\\resize.css"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\default-cover-art.png",
+      "PackagePath": "staticwebassets\\default-cover-art.png"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\greenland.jpg",
+      "PackagePath": "staticwebassets\\greenland.jpg"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\img\\footer-logo.png",
+      "PackagePath": "staticwebassets\\img\\footer-logo.png"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\js\\HeaderScripts.js",
+      "PackagePath": "staticwebassets\\js\\HeaderScripts.js"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\js\\SearchResultScript.js",
+      "PackagePath": "staticwebassets\\js\\SearchResultScript.js"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Учёба\\Курсовая ИС 3.2 курс\\Multi_Library_new\\Multi_Library_new\\wwwroot\\yt1s.com - Greenland.mp3",
+      "PackagePath": "staticwebassets\\yt1s.com - Greenland.mp3"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.Multi_Library_new.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.Multi_Library_new.props",
+      "PackagePath": "build\\Multi_Library_new.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.Multi_Library_new.props",
+      "PackagePath": "buildMultiTargeting\\Multi_Library_new.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.Multi_Library_new.props",
+      "PackagePath": "buildTransitive\\Multi_Library_new.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

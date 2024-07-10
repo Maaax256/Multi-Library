@@ -1,0 +1,54 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+<!--using Multi_Library.Covers;;-->
+@model Tuple<IEnumerable<AuthorSong>, IEnumerable<UserTable>, IEnumerable<UserTable>>
+
+
+@{
+    Layout = "_Layout";
+}
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/AuthorsPage.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <h2 style="align-self: center">Все автора</h2>
+        @{
+            foreach (var obj in Model.Item2)
+            {
+                var CountSong = Model.Item1.Where(x => x.AuthorId == obj.Id).Count();
+                <a class="author-desc" onclick="return confirm('Вы уверены что хотите удалить пользователя @obj.Name?');"
+                   href="@Url.Action("DeleteUsers", "Account", new { authorId = obj.Id})">
+                    <div class="author-cart">
+                        <p>Удалить</p>
+                        <p>Имя: @obj.Name</p>
+                        <p>Дата регистрации: @obj.DateCreate</p>
+                        <p>Количество песен: @CountSong</p>
+                    </div>
+                </a>
+            }
+         }
+        <h2 style="align-self: center">Все обычные пользователи</h2>
+        @{
+            foreach (var obj in Model.Item3)
+            {
+                //var CountSong = Model.Item1.Where(x => x.AuthorId == obj.Id).Count();
+                <a class="author-desc" onclick="return confirm('Вы уверены что хотите удалить пользователя @obj.Name?');"
+                   href="@Url.Action("DeleteUsers", "Account", new { authorId = obj.Id})">
+                    <div class="author-cart">
+                        <p>Удалить</p>
+                        <p>Имя: @obj.Name</p>
+                        <p>Дата регистрации: @obj.DateCreate</p>   <!--.ToShortDateString()-->
+                    </div>
+                </a>
+            }
+        }
+    </div>
+</body>
+</html>

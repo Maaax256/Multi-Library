@@ -1,0 +1,165 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces
+
+<!--using Multi_Library.Covers;;-->
+@{
+    ViewData["Title"] = "ProfilePage";
+    Layout = "_Layout";
+}
+@model Tuple<IEnumerable<Song>, IEnumerable<VideoClip>, IEnumerable<AlbumCover>, UserTable>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/Profile.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Ваш профіль</h2>
+        <div class="edit-form">
+        @{
+            using (Html.BeginForm("ChangeProfileInfo", "Account", FormMethod.Post, new { onsubmit = "return validateForm();" }))
+            {
+                @Html.AntiForgeryToken()
+                <div class="form-group">
+                    <label asp-for="name">Имя</label>
+                    <input asp-for="name" class="form-control inputs" name="Name" value="@Model.Item4.Name" required />
+                    <span asp-validation-for="name" class="text-danger"></span>
+                </div>
+                //<div class="form-group">
+                //    <label asp-for="login">Логин</label>
+                //    <input asp-for="login" class="form-control inputs" name="Login" value="@UserTable.ActiveUser.login" required />
+                //    <span asp-validation-for="login" class="text-danger"></span>
+                //</div>
+                <div class="form-group">
+                    <label asp-for="description">Описание</label>
+                        <textarea asp-for="description" class="form-control inputs" name="description">@Model.Item4.Description</textarea>
+                    <span asp-validation-for="description" class="text-danger"></span>
+                </div>
+                if (Model.Item4.UserType != 2)
+                {
+                    <div class="form-group">
+                        <label>
+                            <input asp-for="author" type="checkbox" id="myCheckbox" onchange="updateHiddenField()" />
+                            Я автор
+                        </label>
+                            <input asp-for="author" type="hidden" value="false" name="author" id="author" />
+                    </div>
+                }
+                <div class="form-group">
+                    <p>Для зміни данних введіть пароль</p>
+                    <label asp-for="password">Пароль</label>
+                        <input asp-for="password" class="form-control inputs" type="password" id="password" name="password" required />
+                    <span asp-validation-for="password" class="text-danger"></span>
+                </div>
+                <button style="margin-top: 50px;" type="submit" class="btn btn-primary">Внести изменения</button>
+            }
+        }
+        </div>
+        @if (Model.Item4.UserType == 1)
+        {
+            <h2>Ваши песни</h2>
+
+            @if (Model.Item1.Count() == 0)
+            {
+                <h3>На данный момент у вас не добавлено песен</h3>
+            }
+            <div class="song-body" style="min-height: 200px;">
+                @foreach (var song in Model.Item1)
+                {
+                    <div class="song-cart">
+                        @{
+                            /*if (song.CoverId.HasValue && Model.Item3 != null)
+                            {
+                            int coverid = song.CoverId.Value;
+                            AlbumCover cover = null;
+                            if ( Model.Item3.FirstOrDefault(x => x.cover.Id == coverid) != null)
+                            {
+                            cover = Model.Item3.FirstOrDefault(x => x.cover.Id == coverid);
+                            }
+                            if (cover != null && cover.cover != null)
+                            {
+                            <img src="@cover.cover.Link" />
+                            }
+                            }*/
+                            <img src="@song.Cover?.Link" />
+                            <p>Название: <strong>@song.Name</strong></p>
+                            <p>Дата выпуска: <strong>@song.DateCreate</strong></p>
+                            @if (song.AlbumId.HasValue)
+                            {
+                                int albumid = song.AlbumId.Value;
+                                var album = Model.Item3.FirstOrDefault(x => x.album.Id == albumid);
+                                <p>Название альбома: <strong>@album.album.Name</strong></p>
+                            }
+                            else
+                            {
+                                <p>Название альбома: <strong>Без альбома</strong></p>
+                            }
+
+                            <a class="detail" href="@Url.Action("SongEditPage", "Song", new { id = song.Id })">Редагувати</a>
+                        }
+                    </div>
+                }
+            </div>
+
+            <h2>Ваши видеоклипы</h2>
+            @if (Model.Item2.Count() == 0)
+            {
+                <h3>На данный момент у вас не добавлено видеоклипов</h3>
+            }
+            <div class="video-body" style="min-height: 200px;">
+                @foreach (var videoClip in Model.Item2)
+                {
+                    <div class="clip-cart">
+                        <video width="250" src="@videoClip.Link" start="10">
+                        </video>
+                        <a><h3>@videoClip.Song.Name</h3></a>
+                        <p>Дата загрузки: @videoClip.DateCreate</p>
+                        <a href="@Url.Action("EditVideoClipPage", "VideoClip", new { videoClipID = videoClip.Id })" class="detail">Редактировать</a>
+                    </div>
+                }
+            </div>
+
+            <h2>Ваши альбомы</h2>
+            @if (Model.Item3.Count() == 0)
+            {
+                <h3>На данный момент у вас не добавлено альбомов</h3>
+            }
+            <div class="album-body" style="min-height: 200px;">
+                @foreach (var obj in Model.Item3)
+                {
+                    var songs = obj.album.Songs.ToList();
+                    var firstSong = songs.FirstOrDefault();
+                    //var authorsLine = string.Join(", ", firstSong.AuthorSongs.Select(authorSong => Model.Item4.GetById(authorSong.AuthorId).Name));
+
+                    <div class="album-cart">
+                        <img src="@obj.cover.Link">
+                        <p>Назва: @obj.album.Name</p>
+                        <p>Автора: authorsLine</p>
+                        <a class="detail" href="@Url.Action("EditAlbumPage", "Album", new { albumID = obj.album.Id, covertId = obj.cover.Id })">Редактировать</a>
+                    </div>
+                }
+            </div>
+        }
+    </div>
+    <script>
+        function updateHiddenField() {
+            var checkbox = document.getElementById("myCheckbox");
+            var hiddenField = document.getElementById("author");
+
+            hiddenField.value = checkbox.checked ? "true" : "false";
+        }
+
+        function validateForm() {
+            var passwordField = document.getElementById("Password");
+            if (passwordField.value.trim() === "") {
+                alert("Введите пароль!");
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+</html>

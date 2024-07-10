@@ -1,0 +1,242 @@
+﻿body{
+    height: 100vh;
+}
+
+.wrapper {
+    min-height: 100vh;
+    max-height: 100%;
+    width: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.song {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 320px;
+    background-color: #f9f9f9;
+}
+
+    .song p {
+        margin: 5px 15px;
+        height: 15px;
+    }
+
+        .song p.null {
+            color: #888;
+            font-style: italic;
+        }
+
+    .song img {
+        align-self: center;
+        width: 250px;
+        height: 150px;
+    }
+
+
+.details-btn {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 180px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FF8C00;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #fff;
+    text-align: center;
+    top: 50px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+    .details-btn:hover {
+        background-color: #D27C00;
+        border-color: #2980b9; 
+    }
+
+
+.author {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    width: 700px;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 15px;
+}
+
+
+.author {
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+    .author:first-child {
+        margin-top: 50px;
+    }
+
+
+    .author p {
+        width: 200px;
+        margin: 0;
+        margin-right: 15px;
+    }
+
+        .author p:first-child {
+            margin-left: 15px;
+        }
+
+
+.album {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 364px;
+    background-color: #f9f9f9;
+}
+
+    .album img {
+        align-self: center;
+        width: 250px;
+        height: 150px;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    .album p {
+        margin: 5px 15px;
+        align-self: flex-start;
+        margin-left: 5px;
+    }
+
+    .album a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        width: 180px;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        height: 35px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #FF8C00;
+        box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+        border: none;
+        color: #fff;
+        text-align: center;
+        top: 50px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor: pointer;
+    }
+
+        .album a:hover {
+            background-color: #D27C00;
+            border-color: #2980b9;
+        }
+
+.cover {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 320px;
+    background-color: #f9f9f9;
+}
+
+    .cover p {
+        margin: 5px 15px;
+        height: 15px;
+    }
+
+        .cover p.null {
+            color: #888;
+            font-style: italic;
+        }
+
+    .cover img {
+        align-self: center;
+        width: 250px;
+        height: 150px;
+    }
+
+.clip {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 364px;
+    background-color: #f9f9f9;
+}
+
+    .clip p {
+        margin: 5px 15px;
+        align-self: flex-start;
+        margin-left: 5px;
+    }
+
+
+.content-body{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.list {
+    margin-right: auto; 
+    margin-left: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 20px;
+    list-style: none;
+}
+
+    .list li {
+        font-size: 22px;
+        margin: 0 10px; 
+        flex: 1; 
+        text-align: center; 
+        cursor: pointer; 
+    }
+
+        .list li:hover {
+            background-color: #f0f0f0;
+        }
+
+.no-res{
+    display: none;
+    align-self: center;
+    justify-content: center;
+}

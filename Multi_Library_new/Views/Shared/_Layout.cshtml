@@ -1,0 +1,105 @@
+﻿@using Multi_Library.Models;
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="~/css/resize.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/css/Header.css" rel="stylesheet" type="text/css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="~/js/bootstrap.min.js"></script> 
+</head>
+<body>
+    <header>
+        <div class="logo-box">
+            <a class="logo" href="@Url.Action("Index", "Home")"> <img class="logo" src="/img/footer-logo.png" /> </a>
+        </div>
+        <div class="nav-bar">
+            <a class="nav-a" href="@Url.Action("AllCovers", "Cover")">Обложки</a>
+            <a class="nav-a" href="@Url.Action("AllAuthors", "User")">Автора</a>
+            <a class="nav-a" href="@Url.Action("AllVideClips", "VideoClip")">Клипы</a>
+            <a class="nav-a" href="@Url.Action("AllAlbum", "Album")">Альбомы</a>
+            <a class="nav-a" href="@Url.Action("SongView", "Song")">Песни</a>
+        </div>
+        <div class="search-area">
+            <form action="/Search/SerachByName" method="get">
+                <input class="search-txt" type="text" name="searchWord" placeholder="Нажмите для поиска">
+                <button type="submit" class="search-btn">Поиск</button>
+            </form>
+        </div>
+        <div class="authefiaction-bar">
+
+                    <a class="nav-a" href="@Url.Action("ProfilePage", "Account")">Профиль</a>
+                    <a class="nav-a" href="@Url.Action("LoginPage", "Account")">Войти</a>
+                    <a class="nav-a" href="@Url.Action("Logout", "Account")">Выйти</a>
+                
+                    <div class="dropdown">
+                        <button id="dropdownMenu1" class="nav-a" data-toggle="dropdown" aria-haspopup="true">Меню</button>
+                                <ul class="dropdown-content">
+                               @{
+                            // style="width: 120px; display: flex; justify-content: center; flex-wrap: wrap;" aria-labelledby="dropdownMenu1"
+                                }
+                                <li>
+                                    <a href="@Url.Action("DeleteUsersPage", "Account")">Удалить пользователя</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("FavoriteSongs", "Account")">Избранные песни</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("MostPopularSongs", "Account")">Популярные песни</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("CreateSongPage", "Song")">Создать песню</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("CreateVideoClipPage", "VideoClip")">Создать клип</a>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("CreateAlbumPage", "Album")">Создать альбом</a>
+                                </li>
+                            </ul>
+                    </div>
+
+        </div>
+    </header>
+    @if (TempData["Message"] != null)
+    {
+
+        <div id="alertMessage" class="alert alert-success">
+            <strong>@TempData["Message"]</strong>
+            <button type="button" class="close">&times;</button>
+
+        </div>
+    }
+    <div>
+        @RenderBody()
+    </div>
+    <footer>
+        <div>
+            <img src="~/img/footer-logo.png" alt="Footer Logo">
+        </div>
+    </footer>
+    <script>
+       $(document).ready(function () {
+            $(".close").click(function () {
+                $("#alertMessage").hide();
+            });
+
+            $("#dropdownMenu1").click(function () {
+                $(".dropdown-content").toggle();
+            });
+
+            $(document).click(function (event) {
+                var $target = $(event.target);
+                if (!$target.closest('.dropdown').length && $('.dropdown-content').is(":visible")) {
+                    $(".dropdown-content").hide();
+                }
+            });
+        });
+    </script>
+</body>
+</html>

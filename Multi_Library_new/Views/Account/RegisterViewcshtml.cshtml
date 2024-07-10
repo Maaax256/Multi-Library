@@ -1,0 +1,66 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/Authotification.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Регистрация</h2>
+
+        @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            @Html.AntiForgeryToken()
+            //<div class="form-group">
+            //    <label asp-for="name">Имя</label>
+            //    <input asp-for="name" class="form-control" name="Name" required />
+            //    <span asp-validation-for="name" class="text-danger"></span>
+            //</div>
+            <div class="form-group">
+                <label asp-for="login">Логин</label>
+                <input asp-for="login" class="form-control" name="login" required />
+                <span asp-validation-for="login" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="password">Пароль</label>
+                <input asp-for="password" class="form-control" type="password" name="password" required />
+                <span asp-validation-for="password" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="description">Описание</label>
+                <input asp-for="description" class="form-control" name="description" />
+                <span asp-validation-for="description" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label>
+                    <input asp-for="IsAuthor" type="checkbox" id="myCheckbox" onchange="updateHiddenField()" />
+                    Я автор
+                </label>
+                <input asp-for="IsAuthor" type="hidden" value="false" name="IsAuthor" id="author" /> 
+            </div>
+            <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+
+        }
+    </div>
+    <script>
+        function updateHiddenField() {
+            var checkbox = document.getElementById("myCheckbox");
+            var hiddenField = document.getElementById("author");
+
+            hiddenField.value = checkbox.checked ? "true" : "false";
+        }
+    </script>
+</body>
+</html>

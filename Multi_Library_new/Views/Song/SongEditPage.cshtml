@@ -1,0 +1,75 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+<!--using Multi_Library.Covers;;-->
+@model Tuple<Song, IAlbum, ICover, List<string>>
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/SongEditPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper" style="height: 100%">
+        <div class="container">
+            <div class="head-info">
+                @{
+                    if (Model.Item1.CoverId.HasValue)
+                    {
+                        int coverid = Model.Item1.CoverId.Value;
+                        var cover = Model.Item3.GetById(coverid);
+                        <img src="@cover.Link" />
+                    }
+                    else
+                    {
+                        <img src="/Covers/Нет_Альбома.jpg" />
+                    }
+                }
+                <form method="post" asp-action="Edit" asp-controller="Song">
+                    <input type="hidden" asp-for="Item1.Id" />
+                    <div class="song-info">
+                        <label asp-for="Item1.Name">Название</label>
+                        <input asp-for="Item1.Name" class="form-control" />
+
+                        <label>Автора</label>
+                        @for (int i = 0; i < Model.Item4.Count; i++)
+                        {
+                            <input type="text" asp-for="@Model.Item4[i]" class="form-control" />
+                        }
+
+                        @if (Model.Item1.Album == null)
+                        {
+                            <label>Альбом: Без альбома</label>
+                        }
+                        else
+                        {
+                            <label asp-for="Item1.Album.Name">Альбом</label>
+                            <input asp-for="Item1.Album.Name" class="form-control" />
+                        }
+                        @if (Model.Item1.VideoClip != null)
+                        {
+                            <label>Видео клип к песне</label>
+                            <input asp-for="Item1.VideoClip" class="form-control" />
+                        }
+                    </div>
+                    <button type="submit" class="btn btn-primary">Сохранить изменения</button>
+                </form>
+            </div>
+            <hr />
+            <div class="song-info-body">
+                <audio controls>
+                    <source src="@Model.Item1.Link" type="audio/mp3">
+                    Ваш браузер не поддерживает элемент аудио.
+                </audio>
+                <textarea asp-for="Item1.Lyrics" class="form-control"></textarea>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

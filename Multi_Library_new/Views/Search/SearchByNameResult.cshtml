@@ -1,0 +1,163 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+<!--using Multi_Library.Covers;;-->
+@model Tuple<List<AuthorSong>, List<Song>, List<AlbumCover>, List<VideoClip>, List<UserTable>>
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/SearchResult.css" rel="stylesheet" type="text/css" />
+    <link href="/css/AuthorsPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper" style="height: 100vh">
+            <ul class="list">
+                <li data-id="cover">Обложки</li>
+                <!--<li>Сборники</li>-->
+                <li data-id="author">Автора</li>
+                <li data-id="clip">Клипы</li>
+                <li data-id="album">Альбомы</li>
+                <li data-id="song">Песни</li>
+            </ul>
+            <div class="content-body">
+                <h2 class="no-res">Не найдено ни одного совпадения</h2>
+            <!--class="author blocks_item"-->
+        @{
+            foreach (var obj in Model.Item5)
+            {
+                var CountSong = Model.Item1.Where(x => x.AuthorId == obj.Id).Count();
+                <a class="author blocks_item" href="@Url.Action("AuthorInfo", "User", new { authorId = obj.Id})">
+                    <div class="author-cart">
+                        <p>Имя: @obj.Name</p>
+                        <p>Количество песен: @CountSong</p>
+                        <p>Дата регистрации: obj.DateRegist.ToShortDateString()</p>
+                    </div>
+                </a>
+            }
+            foreach (var song in Model.Item2)
+            {
+                <div class="song blocks_item">
+                    @{
+                        if (song.CoverId.HasValue)
+                        {
+                            var cover = Model.Item3.Find(x => x.cover.Id == song.CoverId.Value);
+                            if (cover != null && cover.cover.Link != null)
+                            {
+                                <img src="@cover.cover.Link" />
+                            }
+                            else
+                            {
+                                //<img src="/Covers/Нет_Альбома.jpg" />
+                            }
+                        }
+                        <p>Название: <strong>@song.Name</strong></p>
+                        <p>Дата выпуска: <strong>song.DatePut.ToShortDateString()</strong></p>
+                        @if (song.AlbumId.HasValue)
+                        {
+                            //var album = Model.Item3.Find(x => x.album.Id == song.AlbumId.Value);
+                            <p>Название альбома: <strong>@song.Album.Name</strong></p>
+                        }
+                        else
+                        {
+                            <p>Название альбома: <strong>Без альбома</strong></p>
+                        }
+
+                        <a class="details-btn" href="@Url.Action("SongInformation", "Song", new { id = song.Id })">Подробнее</a>
+                    }
+                </div>
+            }
+            foreach (var obj in Model.Item3)
+            {
+                var songs = obj.album.Songs.ToList();
+                var firstSong = songs.FirstOrDefault();
+                var authorsLine = firstSong != null && firstSong.AuthorSongs != null
+                ? string.Join(", ", firstSong.AuthorSongs)
+                : string.Empty;
+                <div class="album blocks_item">
+                   @{
+                       if (obj?.cover?.Link == null)
+                       {
+                           < img src = "/Covers/Нет_Альбома.jpg" />
+                       }
+                       else
+                       {
+                           <img src="@obj.cover.Link">
+                       }
+                    }
+                        <p>Название: @obj.album.Name</p>
+                    <p>Автора: @authorsLine</p>
+                        <a href="@Url.Action("InfoAlbum", "Album", new { albumId = obj?.album?.Id, covertId = obj?.cover?.Id })">Подробнее</a>
+                </div>
+            }
+            foreach (var obj in Model.Item3)
+            {
+                if (obj?.cover?.Link != null)
+                {
+                    <div class="cover blocks_item">
+                        <img class="cover" src="@obj.cover.Link" />
+                        <p>Название альбома: @obj.album.Name</p>
+                        <p>Дата выпускаа: obj.cover.DatePut.ToShortDateString()</p>
+                        <a class="details-btn" href="@Url.Action("InfoAlbum", "Album", new { albumId = obj.album.Id,  covertId = obj.cover.Id})">Подробнее</a>
+                    </div>
+                }
+            }
+            foreach (var obj in Model.Item4)
+            {
+                <div class="clip blocks_item">
+                    <video width="250" src="@obj.Link" start="10">
+                    </video>
+                    <a><h3>@obj.Song.Name</h3></a>
+                    <p>Дата загрузки: obj.DatePut.ToShortDateString()</p>
+                    <a href="@Url.Action("InfoClip", "VideoClip", new { clipId = obj.Id })" class="detail">Подробнее</a>
+                </div>
+            }
+        }
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const list = document.querySelector('.list');
+            const items = document.querySelectorAll('.blocks_item');
+
+            items.forEach(function (item) {
+                if (item.classList.contains("cover")) {
+                    item.style.display = 'flex';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            let counter = 0;
+
+            list.addEventListener('click', function (event) {
+                const targetId = event.target.dataset.id;
+                items.forEach(function (item) {
+                    document.querySelector(".no-res").style.display = "none";
+
+                    if (item.classList.contains(targetId)) {
+                        item.style.display = 'flex';
+                        counter++;
+                    } else {
+                        item.style.display = 'none';
+                    }
+                });
+
+                if (counter === 0) {
+                    document.querySelector(".no-res").style.display = "flex";
+                } else {
+                    counter = 0; 
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

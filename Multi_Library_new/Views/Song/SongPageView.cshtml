@@ -1,0 +1,86 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+<!--using Multi_Library.Covers;;-->
+@model Tuple<Song, IAlbum, ICover, List<string>>
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/SongPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="head-info">
+                @{
+                    if (Model.Item1.CoverId.HasValue)
+                    {
+                        int coverid = Model.Item1.CoverId.Value;
+                        var cover = Model.Item3.GetById(coverid);
+                        <img src="@cover.Link" />
+                    }
+                    else
+                    {
+                        <img src="/Covers/Нет_Альбома.jpg" />
+                    }
+                }
+                <div class="song-info">
+                    <p>@Model.Item1.Name</p>
+                    <p>Автора: </p>
+                    @{
+                        foreach (var authorName in Model.Item4)
+                        {
+                            if (authorName == Model.Item4.Last())
+                            {
+                                <a style="margin-bottom: 2px">@authorName</a>
+                            }
+                            else
+                            {
+                                <a style="margin-bottom: 2px">@authorName,</a>
+                            }
+                        }
+                        if (@Model.Item1.Album == null)
+                        {
+                            <p>Альбом: Без альбома</p>
+                        }
+                        else
+                        {
+                            <br />
+                            <a>Альбом: @Model.Item1.Album.Name</a>
+                        }
+                        if (@Model.Item1.VideoClip != null)
+                        {
+                            <p>Видео клип к песне</p>
+                        }
+                    }
+                </div>
+            </div>
+            <hr />
+            <div class="song-info-body">
+                <audio controls>
+                    <source src="@Model.Item1.Link" type="audio/mp3">
+                    Ваш браузер не поддерживает элемент аудио.
+                </audio>
+                @{
+                    if (Model.Item1.Lyrics == null)
+                    {
+                        <p>Автор не добавил текст</p>
+                    }
+                    else
+                    {
+                        <p>@Html.Raw(Model.Item1.Lyrics.Replace("\\n", "<br>"))</p>
+                    }
+                }
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

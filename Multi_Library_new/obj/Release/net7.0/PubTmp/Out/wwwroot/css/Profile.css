@@ -1,0 +1,193 @@
+﻿
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.clip-cart p,
+.album-cart p,
+.clip-cart .detail,
+.album-cart a {
+    margin: 0;
+}
+
+
+.detail {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    width: 180px;
+    margin-top: auto;
+    margin-left: auto;
+    margin-right: auto;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 30px;
+    background: #FF8C00;
+    box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+    border: none;
+    color: #fff;
+    text-align: center;
+    top: 50px;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer;
+}
+
+    .detail:hover {
+        background-color: #D27C00;
+        border-color: #2980b9;
+    }
+
+
+.song-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: 80px;
+    margin-right: 80px;
+    flex-wrap: wrap;
+}
+
+.song-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 380px;
+    background-color: #f9f9f9;
+}
+
+    .song-cart img{
+        height: 176px;
+        width: 277px;
+    }
+
+    .video-body {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        align-self: flex-start;
+        margin-left: 80px;
+        margin-right: 80px;
+        flex-wrap: wrap;
+    }
+
+.clip-cart {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-right: 50px;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 364px;
+    background-color: #f9f9f9;
+}
+
+    .clip-cart p {
+        margin: 5px 15px;
+        align-self: flex-start;
+        margin-left: 15px;
+    }
+
+
+    .clip-cart a{
+        position: relative;
+        bottom: 0;
+        margin-bottom: 5px;
+        align-self: center;
+    }
+
+    .clip-cart video{
+        max-height: 150px;
+        max-width: 250px;
+        align-self: center;
+    }
+
+
+
+
+.album-body {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-self: flex-start;
+    margin-left: 80px;
+    margin-right: 80px;
+    flex-wrap: wrap;
+}
+
+.album-cart {
+    margin-right: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin: 10px;
+    width: 300px;
+    height: 364px;
+    background-color: #f9f9f9;
+}
+
+
+    .album-cart img {
+        align-self: center;
+        width: 250px;
+        height: 150px;
+        margin: 0;
+        margin-bottom: 25px;
+    }
+
+    .album-cart p {
+        margin: 5px 15px;
+        align-self: flex-start;
+        margin-left: 5px;
+    }
+
+    .album-cart a {
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+        width: 180px;
+        margin-top: auto;
+        margin-left: auto;
+        margin-right: auto;
+        height: 35px;
+        flex-shrink: 0;
+        border-radius: 30px;
+        background: #FF8C00;
+        box-shadow: 0px 0px 6px 2px rgba(0, 0, 0, 0.25);
+        border: none;
+        color: #fff;
+        text-align: center;
+        top: 50px;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: normal;
+        cursor: pointer;
+    }
+
+        .album-cart a:hover {
+            background-color: #D27C00;
+            border-color: #2980b9;
+        }
+
+h2 {
+    text-align: center;
+    margin: 20px 0;
+    font-size: 24px;
+}
+

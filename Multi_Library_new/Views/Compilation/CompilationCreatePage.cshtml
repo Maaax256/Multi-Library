@@ -1,0 +1,110 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+@model Tuple<ISong, IVideoClip, List<AlbumCover>>
+@{
+    Layout = "_Layout";
+}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Compilation</title>
+    <link href="/css/CompilationEdit.css" rel="stylesheet" type="text/css" />
+    <script>
+        function showHideList() {
+            var type = document.getElementById("type").value;
+            var songList = document.getElementById("songList");
+            var clipList = document.getElementById("clipList");
+            var coverList = document.getElementById("coverList");
+
+            if (type === "song_playlist") {
+                songList.style.display = "block";
+                clipList.style.display = "none";
+                coverList.style.display = "none";
+            } else if (type === "clip_playlist") {
+                songList.style.display = "none";
+                clipList.style.display = "block";
+                coverList.style.display = "none";
+            } else if (type === "cover_gallery") {
+                songList.style.display = "none";
+                clipList.style.display = "none";
+                coverList.style.display = "block";
+            }
+        }
+    </script>
+</head>
+<body>
+    <h1>Создать сборку</h1>
+
+    <div class="form-container">
+        @using (Html.BeginForm("CreateCompilation", "CompilationController", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+            <label asp-for="Item1.Name" class="form-label">Название:</label>
+            <input asp-for="Item1.Name" class="form-control">
+
+            <br>
+
+            <br>
+
+            <label asp-for="Item1.Description" class="form-label">Описание:</label>
+
+            <br>
+            <textarea asp-for="Item1.Description" rows="4" cols="50" class="form-textarea"></textarea>
+
+            <br>
+
+            <br>
+
+            <label asp-for="type" class="form-label">Тип плейлиста:</label>
+            <select id="type" asp-for="type" class="form-select" onchange="showHideList()">
+                <option value="song_playlist">Плейлист песен</option>
+                <option value="clip_playlist">Плейлист клипов</option>
+                <option value="cover_gallery">Плейлист обложек</option>
+            </select>
+
+            <br>
+
+            <br>
+
+            <div id="songList" class="list-container">
+                @foreach (var song in Model.Item1.GetAll())
+                {
+                    <label>
+                        <input type="checkbox" asp-for="Item1.SelectedSongs" value="@song.Id"> @song.Name
+                    </label>
+                    <br>
+                }
+            </div>
+
+            <div id="clipList" class="list-container">
+                @foreach (var clip in Model.Item2.GetAll())
+                {
+                    <label>
+                        <input type="checkbox" asp-for="Item2.SelectedClips" value="@clip.Id"> @Model.Item1.GetById(clip.SongId).Name
+                    </label>
+                    <br>
+                }
+            </div>
+
+            <div id="coverList" class="list-container">
+                @foreach (var cover in Model.Item3)
+                {
+                    <label>
+                        <input type="checkbox" asp-for="Item3.SelectedCovers" value="@cover.cover.Id"> @cover.album.Name
+                    </label>
+                    <br>
+                }
+            </div>
+
+            <label asp-for="Item1.Public" class="form-label">Публичная видимость:</label>
+            <input type="checkbox" asp-for="Item1.Public" class="form-checkbox">
+
+            <br>
+
+            <br>
+
+            <button type="submit" class="submit-button">Создать сборку</button>
+        }
+    </div>
+</body>
+</html>

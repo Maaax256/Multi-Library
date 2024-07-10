@@ -1,0 +1,43 @@
+﻿.wrapper{
+    min-height: 100vh;
+    max-height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.author-cart{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 50px;
+    width: 700px;
+    border: 1px solid;
+    border-color: black;
+    border-radius: 15px;
+}
+
+
+.author-desc {
+    margin-bottom: 20px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+
+    .author-desc:first-child {
+        margin-top: 50px;
+    }
+
+
+.author-cart p{
+    width: 200px;
+    margin: 0;
+    margin-right: 15px;
+}
+
+.author-cart p:first-child{
+    margin-left: 15px;
+}
+

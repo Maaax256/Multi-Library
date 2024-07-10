@@ -1,0 +1,52 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+@model Tuple<List<AlbumCover>, IUserTable>
+@{
+    Layout = "_Layout";
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/AlbumsPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h2 style="align-self: center">Все альбомы</h2>
+        <div class="album-box">
+            @{
+                foreach (var obj in Model.Item1)
+                {
+                    var songs = obj.album.Songs.ToList();
+                    var firstSong = songs.FirstOrDefault();
+
+                    if (firstSong != null && firstSong.AuthorSongs != null && firstSong.AuthorSongs.Any())
+                    {
+                        var authorsLine = string.Join(", ", firstSong.AuthorSongs.Select(authorSong => Model.Item2.GetById(authorSong.AuthorId).Name));
+
+                        <div class="album-cart">
+                            <img src="@obj.cover.Link">
+                            <p>Название: @obj.album.Name</p>
+                            <p>Автора: @authorsLine</p>
+                            <a href="@Url.Action("InfoAlbum", "Album", new { albumId = obj.album.Id, covertId = obj.cover.Id })">Детальніше</a>
+                        </div>
+                    }
+                    else
+                    {
+                        <div class="album-cart">
+                            <img src="@obj.cover.Link">
+                            <p>Название: @obj.album.Name</p>
+                            <p>Автора: </p>
+                            <a href="@Url.Action("InfoAlbum", "Album", new { albumId = obj.album.Id, covertId = obj.cover.Id })">Детальніше</a>
+                        </div>
+                    }
+                }
+            }
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+﻿@using Multi_Library.Models;
+
+
+@model Tuple<List<Song>, List<CoverAlbum>>
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/CoversPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <h2 style="align-self: center">Все обложки</h2>
+
+        <div class="cover-box">
+            @{
+                foreach (var obj in Model.Item2)
+                {
+                    if (obj.Album != null)
+                    {
+                        <div class="cover-cart">
+                            <img class="cover" src="@obj.Cover?.Link" />
+                            <p>Название альбома: @obj.Album.Name</p>
+                            <p>Дата выпуска обложки: @obj.Cover?.DateCreate</p>
+                            <a class="details-btn" href="@Url.Action("InfoAlbum", "Album", new { albumId = obj.Album.Id, covertId = obj.Cover?.Id})">Подробнее</a>
+                        </div>
+                    }
+                }
+                foreach(var obj in Model.Item1)
+                {
+                    if (obj.Album == null && obj.Cover != null)
+                    {
+                        <div class="cover-cart">
+                            <img class="cover" src="@obj.Cover.Link" />
+                            <p>Название песни: @obj.Name</p>
+                            <p>Дата выпуска обложки: @obj.Cover.DateCreate</p>
+                            <a class="details-btn" href="@Url.Action("SongInformation", "Song", new {id = obj.Id})">Подробнее</a>
+                        </div>
+                    }
+                }
+            }
+        </div>
+    </div>
+</body>
+</html>

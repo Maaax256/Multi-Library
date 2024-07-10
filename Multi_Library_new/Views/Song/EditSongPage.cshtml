@@ -1,0 +1,128 @@
+﻿@using Multi_Library.Models;
+@using Multi_Library.Interfaces;
+
+<!--using Multi_Library.Covers;;-->
+@model Tuple<Song, List<Album>, List<Cover>, List<string>>
+@{
+    Layout = "_Layout";
+}
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Your Title</title>
+    <link href="/css/SongPage.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    <div class="wrapper">
+        <div class="container">
+            <div class="head-info">
+                @{
+                    if (Model.Item1.CoverId.HasValue)
+                    {
+                        int coverid = Model.Item1.CoverId.Value;
+                        var cover = Model.Item3.FirstOrDefault(x => x.Id == coverid);
+                        <img src="@cover.Link" />
+                    }
+                    else
+                    {
+                        <img src="/Covers/Нет_Альбома.jpg" />
+                    }
+                }
+                <div class="song-info">
+                    <p>@Model.Item1.Name</p>
+                    <p>Автора: </p>
+                    @{
+                        foreach (var authorName in Model.Item4)
+                        {
+                            <a style="margin-bottom: 5px; color: blue">@authorName, </a>
+                        }
+                        if (@Model.Item1.Album == null)
+                        {
+                            <p>Альбом: Без альбома</p>
+                        }
+                        else
+                        {
+                            <br />
+                            <a>Альбом: @Model.Item1.Album.Name</a>
+                        }
+                        if (@Model.Item1.VideoClip != null)
+                        {
+                            <p>Видео клип к песне</p>
+                            <video controls width="550" src="@Model.Item1.VideoClip.Link"></video>
+                        }
+                    }
+                </div>
+            </div>
+            <div class="song-info-body">
+                <audio controls>
+                    <source src="@Model.Item1.Link" type="audio/mp3">
+                    Ваш браузер не поддерживает элемент аудио.
+                </audio>
+            </div>
+            <hr />
+
+          
+                <div class="edit-form">
+                @using (Html.BeginForm("UpdateSong", "Song", FormMethod.Post))
+                {
+                    <input type="hidden" name="songID" value="@Model.Item1.Id" />
+                    <div class="form-group">
+                        <label asp-for="Item1.Name">Название песни</label>
+                        <input asp-for="Item1.Name" type="text" name="SongName" value="@Model.Item1.Name" style="margin-bottom: 20px;" class="form-control" required />
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Item1.Lyrics">Текст песни</label>
+                        <textarea asp-for="Item1.Lyrics" name="SongLyrics" class="form-control" style="margin-bottom: 20px;">@Model.Item1.Lyrics</textarea>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="Item1">Выберите  альбом</label>
+                        <select asp-for="Item1" name="AlbumId" class="form-control" style="margin-bottom: 20px;">
+                            @{
+                                if(Model.Item2 == null && Model.Item1.AlbumId == null)
+                                {
+                                    <option>У вас нет альбомов</option>
+                                }
+                                else
+                                {
+                                    if (Model.Item1.AlbumId == null)
+                                    {
+                                        <option>Выберите альбом</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@Model.Item1.AlbumId">@Model.Item1.Album.Name</option>
+                                    }
+                                    foreach (var album in Model.Item2)
+                                    {
+                                        <option value="@album.Id")>@album.Name</option>
+                                    }
+                                } 
+                            }
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label asp-for="SongFile">Завантажте файл пісні</label>
+                        <input asp-for="SongFile" style="margin-bottom: 20px;" accept=".mp3" type="file" name="SongFile" class="form-control-file" />
+                        <span asp-validation-for="SongFile" class="text-danger"></span>
+                    </div>
+                    <div class="form-group">
+                        <button style ="margin-bottom: 20px;" type="submit" class="btn btn-primary">Сохранить изменения</button>
+                    </div>
+                }
+                @using (Html.BeginForm("RemoveSong", "Song", FormMethod.Post))
+                {
+                    <input type="hidden" name="SongId" value="@Model.Item1.Id"/>
+                    <div class="form-group">
+                        <button style="margin-bottom: 20px;" type="submit" class="btn btn-remove">Удалить песню</button>
+                    </div>
+                }
+                </div>
+            
+        </div>
+
+    </div>
+</body>
+</html>

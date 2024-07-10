@@ -1,0 +1,53 @@
+﻿.create-video-clip-container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    min-height: 100vh;
+    max-height: 100%;
+}
+
+    .create-video-clip-container h2 {
+        margin-bottom: 20px;
+    }
+
+    .create-video-clip-container .form-group {
+        margin-bottom: 20px;
+    }
+
+    .create-video-clip-container label {
+        display: block;
+        margin-bottom: 5px;
+    }
+
+    .create-video-clip-container input[type="text"],
+    .create-video-clip-container input[type="file"],
+    .create-video-clip-container select {
+        width: 100%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        box-sizing: border-box;
+    }
+
+    .create-video-clip-container input[type="submit"],
+    .create-video-clip-container button {
+        width: 100%;
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+        .create-video-clip-container input[type="submit"]:hover,
+        .create-video-clip-container button:hover {
+            background-color: #45a049;
+        }
+
+    .create-video-clip-container .text-danger {
+        color: red;
+    }
